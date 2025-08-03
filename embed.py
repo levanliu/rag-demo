@@ -1,4 +1,4 @@
-import chunk
+import recursiveCharacterTextSplitter as chunk
 import chromadb
 from google import genai
 
@@ -60,5 +60,5 @@ def generate_output(question: str):
 
 if __name__ == '__main__':
     question = "令狐冲领悟了什么魔法？"
-    # create_db()
+    create_db()
     print(generate_output(question))

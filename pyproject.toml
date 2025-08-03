@@ -9,8 +9,9 @@ dependencies = [
   "chromadb",
   "google-genai>=1.0.0",
   "socksio>=1.0.0",
+  "langchain_text_splitters",
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 authors = [
   {name = "Levan liu", email = "levan.liu@advantest.com"},
 ]
@@ -23,4 +24,4 @@ license = "MIT"
 license-files = ["LICEN[CS]E.*"]
 
 [tool.hatch.build.targets.wheel]
-include = ["chunk.py","embed.py","query_wrapper.py"]
+include = ["chunk.py","embed.py","query_wrapper.py","recursiveCharacterTextSplitter.py"]
