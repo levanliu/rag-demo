@@ -23,4 +23,4 @@ license = "MIT"
 license-files = ["LICEN[CS]E.*"]
 
 [tool.hatch.build.targets.wheel]
-include = ["chunk.py","embed.py"]
+include = ["chunk.py","embed.py","query_wrapper.py"]

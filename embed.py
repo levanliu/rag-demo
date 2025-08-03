@@ -43,9 +43,7 @@ def query_db(question: str) -> list[str]:
     return result["documents"][0]
 
 
-if __name__ == '__main__':
-    question = "令狐冲领悟了什么魔法？"
-    # create_db()
+def generate_output(question: str):
     chunks = query_db(question)
     prompt = "Please answer user's question according to context\n"
     prompt += f"Question: {question}\n"
@@ -58,4 +56,9 @@ if __name__ == '__main__':
         model=LLM_MODEL,
         contents=prompt
     )
-    print(result)
+    return result.text
+
+if __name__ == '__main__':
+    question = "令狐冲领悟了什么魔法？"
+    # create_db()
+    print(generate_output(question))
