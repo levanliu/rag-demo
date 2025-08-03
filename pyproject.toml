@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rag-demo"
+version = "2025.08.03"
+dependencies = [
+  "chromadb",
+  "google-genai>=1.0.0",
+  "socksio>=1.0.0",
+]
+requires-python = ">=3.9"
+authors = [
+  {name = "Levan liu", email = "levan.liu@advantest.com"},
+]
+maintainers = [
+  {name = "Levan liu", email = "levan.liu@advantest.com"},
+]
+description = "rag demo!"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICEN[CS]E.*"]
+
+[tool.hatch.build.targets.wheel]
+include = ["chunk.py","embed.py"]
